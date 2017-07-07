@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-from Training.model.group import Group
-from Training.fixture.group import GroupHelper
-from Training.fixture.session import SessionHelper
-from Training.fixture.application import Application
 
+from Training.model.group import Group
 
 def test_delete_first_group(app):
+    if app.group.count() == 0:
+        app.group.create(Group(name="Test_add", header="new2", footer="new2"))
     app.group.delete_first_group()
+
+
