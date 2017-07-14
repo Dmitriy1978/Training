@@ -26,7 +26,7 @@ class GroupHelper:
         # open modification group
         wd.find_element_by_name("edit").click()
         # fill group form
-        self.fill_group_form (new_group_date)
+        self.fill_group_form(new_group_date)
         # submit modification.click ()
         wd.find_element_by_name("update").click ()
         self.return_to_group_page ()
@@ -61,7 +61,7 @@ class GroupHelper:
         if text is not None:
             wd.find_element_by_name(field_name).click()
             wd.find_element_by_name(field_name).clear()
-            wd.find_element_by_name(field_name).send_keys (text)
+            wd.find_element_by_name(field_name).send_keys(text)
 
     def open_groups_page(self):
         wd = self.app.wd
